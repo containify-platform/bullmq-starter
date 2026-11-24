@@ -1,0 +1,25 @@
+{
+  "name": "bullmq-starter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev:web": "tsx watch src/web.ts",
+    "dev:worker": "tsx watch src/worker.ts",
+    "start:web": "node dist/web.js",
+    "start:worker": "node dist/worker.js"
+  },
+  "dependencies": {
+    "bullmq": "^6.7.10",
+    "ioredis": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
