@@ -1,5 +1,7 @@
 # BullMQ worker starter
 
+[![Deploy on Containify](https://containify.cloud/deploy-button.svg)](https://containify.cloud/templates/bullmq-worker)
+
 A [BullMQ](https://bullmq.io) job queue on Node.js 24 and [Valkey](https://valkey.io), split into two apps from one repository, ready to deploy on [Containify](https://containify.cloud):
 
 - **Web** (`src/web.ts`): a small HTTP API that enqueues jobs and reports on them
@@ -25,6 +27,10 @@ curl -X POST localhost:3000/jobs -H 'content-type: application/json' -d '{"text"
 
 ## Deploy on Containify
 
+[![Deploy on Containify](https://containify.cloud/deploy-button.svg)](https://containify.cloud/templates/bullmq-worker)
+
+One click deploys it on [Containify](https://containify.cloud). The [template page](https://containify.cloud/templates/bullmq-worker) shows what it creates, and passwords, connection strings and the HTTPS address are filled in for you.
+
 Deploy the **BullMQ worker starter** template from the catalogue (`containify templates deploy bullmq-worker`). It builds this repository once per app with its Dockerfile and adds:
 
 - **Web**: the API, on a public HTTPS endpoint, with `/health` as its health check. Start command `node dist/web.js`.
@@ -43,3 +49,7 @@ To make it yours, fork this repository, point both apps' source at your fork, an
 ## License
 
 MIT
+
+---
+
+Made by [Containify](https://containify.cloud): deploy apps, databases and workers from a Git repo or an image, with per-second billing. [Docs](https://containify.cloud/docs) · [Templates](https://containify.cloud/templates)
